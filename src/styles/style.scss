@@ -1,0 +1,83 @@
+$yellow: hsl(47, 88%, 63%);
+$light: hsl(0, 0%, 42%);
+$dark: hsl(0, 0%, 7%);
+
+@font-face {
+  font-family: figtree-med;
+  src: url(assets/Figtree-Medium.ttf);
+}
+@font-face{
+  font-family: figtree-bold;
+  src: url(assets/Figtree-ExtraBold.ttf);
+}
+
+
+@mixin figtree-med{
+  font-family: figtree-med, Arial, sans-serif;
+}
+@mixin figtree-bold{
+  font-family: figtree-bold, Arial, sans-serif;
+}
+
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $yellow;
+  height: 100dvh;
+}
+
+.card{
+  width: min(300px, 80%);
+  border: 1px solid $dark;
+  border-radius: 8px;
+  box-shadow: 8px 8px $dark;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  
+  *{
+    margin: 0;
+  }
+  img{
+    border-radius: 8px;
+  }
+  p {
+    @include figtree-med;
+    color: $dark;
+  }
+  .state{
+    padding: 12px 16px;
+    background: $yellow;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-start;
+    @include figtree-bold;
+  }
+  .title{
+    color: $dark;
+    transition: .5s all;
+    &:hover{
+      transition: .5s all;
+      color: $yellow;
+    }
+  }
+  .details {
+    color: $light;
+  }
+  .avatar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    p{
+      @include figtree-bold;
+    }
+    img{
+      width:32px;
+    }
+  }
+}

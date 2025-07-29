@@ -1,0 +1,69 @@
+@font-face {
+  font-family: figtree-med;
+  src: url(assets/Figtree-Medium.ttf);
+}
+@font-face {
+  font-family: figtree-bold;
+  src: url(assets/Figtree-ExtraBold.ttf);
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(47, 88%, 63%);
+  height: 100dvh;
+}
+
+.card {
+  width: min(300px, 80%);
+  border: 1px solid hsl(0, 0%, 7%);
+  border-radius: 8px;
+  box-shadow: 8px 8px hsl(0, 0%, 7%);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+}
+.card * {
+  margin: 0;
+}
+.card img {
+  border-radius: 8px;
+}
+.card p {
+  font-family: figtree-med, Arial, sans-serif;
+  color: hsl(0, 0%, 7%);
+}
+.card .state {
+  padding: 12px 16px;
+  background: hsl(47, 88%, 63%);
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+  font-family: figtree-bold, Arial, sans-serif;
+}
+.card .title {
+  color: hsl(0, 0%, 7%);
+  transition: 0.5s all;
+}
+.card .title:hover {
+  transition: 0.5s all;
+  color: hsl(47, 88%, 63%);
+}
+.card .details {
+  color: hsl(0, 0%, 42%);
+}
+.card .avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+.card .avatar p {
+  font-family: figtree-bold, Arial, sans-serif;
+}
+.card .avatar img {
+  width: 32px;
+}
